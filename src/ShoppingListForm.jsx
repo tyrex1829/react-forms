@@ -17,12 +17,12 @@ function ShoppingListForm ({ addItem }) {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        addItem(FormData)
+        addItem(formData);
+        setFormData({product: "", quantity: 0});
     }
 
     return (
         <form action="#" onSubmit={handleSubmit}>
-            <h1>Product is : {formData.product} - {formData.quantity}</h1>
             <label htmlFor="product">Product Name : </label>
             <input
                 type="text"
