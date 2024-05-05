@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+// old version
 function SignupForm () {
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
