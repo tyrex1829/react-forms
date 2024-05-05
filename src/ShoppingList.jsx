@@ -1,4 +1,5 @@
 import { useState } from "react"
+import ShoppingListForm from './ShoppingListForm';
 
 function ShoppingList () {
     const [items, setItems] = useState([{
@@ -11,6 +12,12 @@ function ShoppingList () {
         quantity: 15
     }]);
 
+    const addItem = (item) => {
+        setItems(curr => {
+            return [...curr, {...item, id: 9}];
+        })
+    }
+
     return (
         <div>
             <h1>Shopping List</h1>
@@ -21,6 +28,7 @@ function ShoppingList () {
                     </li>
                 ))}
             </ul>
+            <ShoppingListForm addItem={addItem} />
         </div>
     )
 }
